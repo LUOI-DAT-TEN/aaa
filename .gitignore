@@ -1,0 +1,4 @@
+Microsoft VS Code/
+*.exe
+node_modules/
+.env
