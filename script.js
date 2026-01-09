@@ -1,14 +1,20 @@
-const allLetters = 'abcdefghijklmnopqrstuvwxyz';
+const allLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()';
 
-// Tạo chữ cái rơi liên tục
+// Tạo các cột chữ cái
+const columns = Math.floor(window.innerWidth / 30); // Số cột dựa trên chiều rộng màn hình
+const columnWidth = window.innerWidth / columns;
+
+// Tạo chữ cái rơi theo cột
 function createFallingLetter() {
     const letter = document.createElement('div');
     letter.className = 'trail-letter';
     letter.textContent = allLetters[Math.floor(Math.random() * allLetters.length)];
     
-    // Vị trí ngẫu nhiên theo chiều ngang
-    const randomX = Math.random() * window.innerWidth;
-    letter.style.left = randomX + 'px';
+    // Chọn cột ngẫu nhiên
+    const randomColumn = Math.floor(Math.random() * columns);
+    const xPosition = randomColumn * columnWidth + columnWidth / 2;
+    
+    letter.style.left = xPosition + 'px';
     letter.style.top = '-50px'; // Bắt đầu từ trên cùng
     
     // Thời gian rơi ngẫu nhiên từ 2-4 giây
@@ -21,4 +27,6 @@ function createFallingLetter() {
         letter.remove();
     }, fallDuration * 1000);
 }
-setInterval(createFallingLetter, 30);
+
+// Tạo chữ cái mới mỗi 100ms
+setInterval(createFallingLetter, 20);
