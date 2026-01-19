@@ -3,15 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8\3</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ngày Quốc Tế Phụ Nữ 8/3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #e91e63, #ff6090);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #d81b60;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ad1457;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
+        }
+
+        section h2 {
+            color: #e91e63;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #e91e63;
+            padding-bottom: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+        }
+
+        .card h3 {
+            color: #c2185b;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .flower {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        /* Quote Section */
+        .quote {
+            background: linear-gradient(135deg, #ff6090, #e91e63);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.3rem;
+            position: relative;
+        }
+
+        .quote::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #880e4f;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer .heart {
+            color: #ff4081;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li a {
+                padding: 0.8rem;
+            }
+
+            .quote {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="main-text">
-        web đang trong giai đoạn<br>
-        thiết kế vui lòng quay lại sau
-    </div>
+    <!-- Header -->
+    <header>
+        <h1>🌸 Ngày Quốc Tế Phụ Nữ 8/3 🌸</h1>
+        <p>Chúc mừng ngày của những người phụ nữ tuyệt vời!</p>
+    </header>
 
-    <script src="script.js"></script>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#history">Lịch Sử</a></li>
+            <li><a href="#meaning">Ý Nghĩa</a></li>
+            <li><a href="#wishes">Lời Chúc</a></li>
+            <li><a href="#celebrate">Cách Kỷ Niệm</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- History Section -->
+        <section id="history">
+            <h2>Lịch Sử Ngày 8/3</h2>
+            <p>Ngày Quốc tế Phụ nữ 8/3 được tổ chức lần đầu tiên vào năm 1911 tại nhiều nước châu Âu. Ngày này được thiết lập để tôn vinh những thành tựu của phụ nữ trong các lĩnh vực chính trị, kinh tế, văn hóa và xã hội.</p>
+            <p style="margin-top: 1rem;">Liên Hợp Quốc chính thức công nhận ngày 8/3 là Ngày Quốc tế Phụ nữ từ năm 1975, đánh dấu vai trò quan trọng của phụ nữ trong xã hội hiện đại.</p>
+        </section>
+
+        <!-- Meaning Section -->
+        <section id="meaning">
+            <h2>Ý Nghĩa Của Ngày 8/3</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="flower">💐</div>
+                    <h3>Tôn Vinh Phụ Nữ</h3>
+                    <p>Ghi nhận những đóng góp to lớn của phụ nữ trong mọi lĩnh vực của đời sống</p>
+                </div>
+                <div class="card">
+                    <div class="flower">🌹</div>
+                    <h3>Bình Đẳng Giới</h3>
+                    <p>Nâng cao nhận thức về quyền bình đẳng giữa nam và nữ trong xã hội</p>
+                </div>
+                <div class="card">
+                    <div class="flower">🌺</div>
+                    <h3>Trao Quyền Phụ Nữ</h3>
+                    <p>Khuyến khích phụ nữ phát huy năng lực và vị thế của mình</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section>
+            <div class="quote">
+                "Một người phụ nữ là vòng tròn đầy đủ. Trong bản thân cô ấy là sức mạnh để sáng tạo, nuôi dưỡng và biến đổi."
+                <br><br>
+                <strong>- Diane Mariechild</strong>
+            </div>
+        </section>
+
+        <!-- Wishes Section -->
+        <section id="wishes">
+            <h2>Lời Chúc Ý Nghĩa</h2>
+            <div class="grid">
+                <div class="card">
+                    <p>💖 Chúc mừng ngày 8/3! Chúc các chị em luôn tươi trẻ, xinh đẹp và hạnh phúc!</p>
+                </div>
+                <div class="card">
+                    <p>🌸 Gửi đến bạn những lời chúc tốt đẹp nhất trong ngày đặc biệt này!</p>
+                </div>
+                <div class="card">
+                    <p>🌹 Chúc mọi phụ nữ luôn mạnh mẽ, tự tin và thành công trong cuộc sống!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Celebration Section -->
+        <section id="celebrate">
+            <h2>Cách Kỷ Niệm Ngày 8/3</h2>
+            <p><strong>🎁 Tặng quà:</strong> Hoa, quà tặng ý nghĩa cho những người phụ nữ thân yêu</p>
+            <p><strong>🍽️ Bữa tiệc:</strong> Tổ chức bữa ăn gia đình hoặc gặp gỡ bạn bè</p>
+            <p><strong>💌 Lời cảm ơn:</strong> Bày tỏ sự biết ơn đến mẹ, chị em, bạn gái, vợ...</p>
+            <p><strong>🎉 Sự kiện:</strong> Tham gia các hoạt động cộng đồng tôn vinh phụ nữ</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>❤️ Hãy trân trọng và tôn vinh những người phụ nữ trong cuộc đời bạn mỗi ngày! ❤️</p>
+        <p>Made with <span class="heart">♥</span> for International Women's Day</p>
+        <p>&copy; 2024 - Ngày Quốc Tế Phụ Nữ 8/3</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add floating flowers effect
+        function createFloatingFlower() {
+            const flower = document.createElement('div');
+            flower.textContent = ['🌸', '🌺', '🌹', '💐'][Math.floor(Math.random() * 4)];
+            flower.style.position = 'fixed';
+            flower.style.left = Math.random() * 100 + 'vw';
+            flower.style.top = '-50px';
+            flower.style.fontSize = '2rem';
+            flower.style.opacity = '0.6';
+            flower.style.pointerEvents = 'none';
+            flower.style.zIndex = '1000';
+            flower.style.animation = `fall ${5 + Math.random() * 5}s linear`;
+            
+            document.body.appendChild(flower);
+            
+            setTimeout(() => {
+                flower.remove();
+            }, 10000);
+        }
+
+        // Add CSS for falling animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Create flowers periodically
+        setInterval(createFloatingFlower, 2000);
+
+        // Highlight active nav item on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.backgroundColor = '';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.backgroundColor = '#ad1457';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
